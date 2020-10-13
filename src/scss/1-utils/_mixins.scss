@@ -1,0 +1,32 @@
+@mixin flex($justify: center, $align: center){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+//* MEDIA QUERY MANAGER
+/*
+0 - 500px:      Phone
+500 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == tab {
+      @media only screen and (min-width: 31.25em) { @content }; //500px
+  }
+  @if $breakpoint == tab-lg {
+    @media only screen and (min-width: 48em) { @content }; //768px
+}
+}

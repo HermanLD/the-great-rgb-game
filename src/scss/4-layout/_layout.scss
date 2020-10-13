@@ -1,0 +1,19 @@
+.wrapper {
+  height: 100vh;
+}
+
+.display {
+  text-align: center;
+}
+
+.ctrl {
+  padding: 1.8rem 0;
+  background-color: #ffffff;
+}
+
+.ctrl-wrap {
+  @include flex(space-between);
+  padding: 0 1.8rem;
+  margin: 0 auto;
+  max-width: 600px;
+}

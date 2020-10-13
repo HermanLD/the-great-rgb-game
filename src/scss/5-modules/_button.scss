@@ -1,0 +1,12 @@
+.btn {
+  padding: 3px 10px;
+  border-radius: 100px;
+  background-color: $primary-color;
+  font-size: 1.3rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover { background-color: rgba($primary-color,.8); }
+
+  &:active { color: yellow; }
+}

@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  //? This defines what 1rem is
+  //? 1rem = 10px; 10px/16px = 62.5%
+  font-size: 62.5%;
+  // $base-f-size: 68.75%;
+  // $base-f-size: 75%;
+  // $base-f-size: 81.25%;
+  // $base-f-size: 87.5%;
+  // $base-f-size: 93.75%;
+  
+  @include respond(tab) {
+    font-size: 75%;
+  }
+  @include respond(tab) {
+    font-size: 93%;
+  }
+}
+
+body {
+  background-color: lightslategray;
+  box-sizing: border-box;
+  font-family: $primary-ff;
+  font-weight: $reg-fw;
+  color: $body-color;
+  padding: 1.8rem 0;
+}
+
+a { text-decoration: none; }
+
+label { display: inline-block; }
+
+h1 {
+  padding-bottom: 1.8rem;
+  font-size: 3.2rem;
+}

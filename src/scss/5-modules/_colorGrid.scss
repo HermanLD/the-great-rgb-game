@@ -1,0 +1,20 @@
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 10rem);
+  grid-template-rows: repeat(2, 10rem);
+  margin: 4.5rem auto;
+  justify-content: center;
+  @include respond(tab-lg) {
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+  }
+
+  &-tile {
+    background-color: rgb(0, 128, 90);
+    border: 3px solid #ffffff;
+    cursor: pointer;
+    @include respond(tab-lg) {
+      border-radius: 3px;
+    }
+  }
+}
