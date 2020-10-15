@@ -1,7 +1,8 @@
-export const Els = {
+export const dom = {
   colorGrid: document.querySelector(".color-grid"),
   colorDisplay: document.querySelector(".display-color"),
   colorBtn: document.querySelector(".btn"),
+  switch: document.querySelector(".switch"),
   modeSwitch: document.querySelector("#mode-switch"),
 };
 
@@ -13,7 +14,7 @@ function idFormat(colorCode) {
 };
 
 export const renderDisplay = (gameColor) => {
-  Els.colorDisplay.textContent = `RGB(${rgbFormat(gameColor)})`;
+  dom.colorDisplay.textContent = `RGB(${rgbFormat(gameColor)})`;
   // console.log(gameColor); //! TEST
 };
 
@@ -24,8 +25,13 @@ export const renderTiles = (arrTiles) => {
     class="color-grid-tile"
     id="${idFormat(tile)}"
     style="background-color: rgb(${rgbFormat(tile)})"></div>`;
-    Els.colorGrid.insertAdjacentHTML("beforeend", markup);
+    dom.colorGrid.insertAdjacentHTML("beforeend", markup);
     // console.log(el); //! TEST
   });
+};
+
+export const removeColors = () => {
+  dom.colorGrid.innerHTML = "";
+  dom.colorDisplay.innerHTML = "";
 };
 console.log("Felicidades from gameView!");

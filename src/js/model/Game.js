@@ -1,6 +1,6 @@
 export default console.log("Felicidades from Game!");
 
-//TODO: Generate random colors in RGB format
+//TODO: Generate random colors for RGB format
 export const generateRGB = () => {
   //? RGB #s 0-255
   let num1 = Math.floor(Math.random()*256);
@@ -11,18 +11,21 @@ export const generateRGB = () => {
 }
 
 //TODO: Stuff a num colors into an array depending to mode
+//? This Generates an array w/o winning color
 export const rgbArr = (mode) => {
   let colorBundle = [];
-  if (!mode) {
+  if (mode === false) {
     for (let i = 0; i < 5; i++) {
       colorBundle.push(generateRGB());
     }
   }
-  if (mode) {
+  if (mode === true) {
     for (let i = 0; i < 2; i++) {
       colorBundle.push(generateRGB());
     }
   }
+  // console.log(mode); //! TEST
   return colorBundle;
+
 }
 
