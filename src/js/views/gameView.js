@@ -1,7 +1,7 @@
 export const dom = {
   colorGrid: document.querySelector(".color-grid"),
   colorDisplay: document.querySelector(".display-color"),
-  colorBtn: document.querySelector(".btn"),
+  colorBtn: document.querySelector("#rndm-btn"),
   switch: document.querySelector(".switch"),
   modeSwitch: document.querySelector("#mode-switch"),
 };

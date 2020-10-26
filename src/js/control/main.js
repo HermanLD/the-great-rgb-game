@@ -38,10 +38,16 @@ export const init = () => {
   runGame(false);
 
   //* GAME EVENTS
-  //TODO: Get input from user
-  //TODO: Check for correct color
-  //TODO: If correct, display result
-  //TODO: If wrong, remove incorrect tile
+  gameView.dom.colorGrid.addEventListener("click", (e) => {
+    console.log(e.target.id === state.color.join("-"));
+    // if (e.target.id === state.color.join("-")) {
+
+    // }
+    //TODO: Get input from user
+    //TODO: Check for correct color
+    //TODO: If correct, display result
+    //TODO: If wrong, remove incorrect tile
+  });
 
   //* MODE EVENT
   gameView.dom.modeSwitch.addEventListener(
